@@ -52,6 +52,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
   gem "rspec-rails"
   gem "factory_bot_rails"
+  gem "ffaker"
 end
 
 group :development do
@@ -63,5 +64,8 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  gem "guard-rspec", require: false
+
 end
 
