@@ -24,5 +24,25 @@ RSpec.describe Location, type: :model do
       is_expected.to be_invalid
     end
 
+    it "is invalid with a latitude too high" do
+      subject.latitude = 100
+      is_expected.to be_invalid
+    end
+
+    it "is invalid with a latitude too low" do
+      subject.latitude = -100
+      is_expected.to be_invalid
+    end
+
+    it "is invalid with a longitude too high" do
+      subject.longitude = 190
+      is_expected.to be_invalid
+    end
+
+    it "is invalid with a longitude too low" do
+      subject.longitude = -190
+      is_expected.to be_invalid
+    end
+
   end
 end
